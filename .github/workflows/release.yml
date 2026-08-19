@@ -60,8 +60,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >
           npx
-          --package semantic-release@25
-          --package @semantic-release/exec@6.0.3
-          --package conventional-changelog-conventionalcommits@9
+          --package semantic-release@25.0.9
+          --package @semantic-release/exec@7.1.0
+          --package conventional-changelog-conventionalcommits@10.3.0
           --package typescript@5.9.3
           semantic-release
