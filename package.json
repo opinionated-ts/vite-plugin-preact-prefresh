@@ -45,7 +45,7 @@
     "tests": "vitest run",
     "tests:watch": "vitest",
     "tests:cov": "vitest run --coverage",
-    "postinstall": "lefthook install"
+    "hooks:install": "lefthook install"
   },
   "dependencies": {
     "@ampproject/remapping": "2.3.0",
