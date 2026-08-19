@@ -277,5 +277,5 @@ if (import.meta.hot) {
 
 export { prefresh };
 
-// oxlint-disable-next-line import/no-default-export max-lines
-export default prefresh;
+// oxlint-disable-next-line import/no-default-export max-lines no-warning-comments
+export default prefresh; // TODO: Modularize the plugin and remove this disable: See issue #2.

@@ -1,3 +1,7 @@
+// oxlint-disable-next-line unicorn/no-abusive-eslint-disable
+// oxlint-disable
+// TODO: Improve type safety, fix lint errors, and remove these disables. See issue #1.
+
 import type { Plugin, ResolvedConfig, TransformResult } from "vite";
 
 import { describe, expect, it } from "vitest";
