@@ -2,8 +2,11 @@ import { defineConfig } from "vitest/config";
 
 // oxlint-disable-next-line import/no-default-export
 export default defineConfig({
+  resolve: {
+    tsconfigPaths: true,
+  },
+
   test: {
-    // reporters: ["default", "junit"]
     coverage: {
       include: ["src/**/*.{ts,tsx}"],
 

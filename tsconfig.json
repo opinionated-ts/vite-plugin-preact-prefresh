@@ -29,6 +29,10 @@
 
     // Some stricter flags
     "noUnusedLocals": false,
-    "noUnusedParameters": false
+    "noUnusedParameters": false,
+
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   }
 }
