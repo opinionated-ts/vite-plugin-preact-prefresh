@@ -3,4 +3,10 @@
 // Blocked by: https://github.com/oxc-project/oxc/issues/25824
 // oxlint-disable import/no-default-export
 
-export { default } from "awesome-config/cspell.config";
+import cspellSettings from "awesome-config/cspell.config";
+
+export default {
+  ...cspellSettings,
+  dictionaries: [...cspellSettings.dictionaries],
+  words: [...cspellSettings.words, "prefresh", "pluginutils", "ampproject"],
+};
