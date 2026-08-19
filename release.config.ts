@@ -53,7 +53,7 @@ export default {
      * in npm as described in the official documentation:
      * https://docs.npmjs.com/trusted-publishers
      */
-    // "@semantic-release/npm", // → publish to npm
+    "@semantic-release/npm", // → publish to npm
 
     "@semantic-release/github", // → create a GitHub Release
   ],
