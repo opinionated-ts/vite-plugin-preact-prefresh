@@ -1,0 +1,36 @@
+{
+  "name": "ts-template",
+  "type": "module",
+  "scripts": {
+    "cspell": "cspell lint .",
+    "fmt": "oxfmt --check . 1>/dev/null || oxfmt --check .",
+    "fmt:fix": "oxfmt . 1>/dev/null || oxfmt .",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "check": "bun fmt && bun lint && bun cspell",
+    "fix": "bun fmt:fix && bun lint:fix",
+    "tests": "vitest run",
+    "tests:watch": "vitest",
+    "tests:cov": "vitest run --coverage",
+    "postinstall": "lefthook install"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@vitest/coverage-v8": "4.1.10",
+    "awesome-config": "3.0.1",
+    "vitest": "4.1.10"
+  },
+  "peerDependencies": {
+    "@types/bun": "1.3.14",
+    "@types/node": "26.1.2",
+    "typescript": "7.0.2"
+  },
+  "overrides": {
+    "nanoid": "3.3.18"
+  },
+  "engines": {
+    "bun": "1.3.14",
+    "node": "26.7.0"
+  },
+  "packageManager": "bun@1.3.14"
+}
