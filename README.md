@@ -14,3 +14,23 @@ This is a focused alternative to the Prefresh integration included in `@preact/p
 - Provides a small configuration API with `include`, `exclude`, `jsxImportSource`, and `target`.
 
 Unlike `@preact/preset-vite`, it does not include Preact aliases, DevTools, prerendering, or the other integrations provided by the preset.
+
+## Installation
+
+```sh
+bun add -D vite-plugin-preact-prefresh
+# pnpm add -D vite-plugin-preact-prefresh
+# npm install -D vite-plugin-preact-prefresh
+# yarn add -D vite-plugin-preact-prefresh
+```
+
+## Usage
+
+```ts
+import { defineConfig } from "vite";
+import prefresh from "vite-plugin-preact-prefresh";
+
+export default defineConfig({
+  plugins: [prefresh()],
+});
+```
