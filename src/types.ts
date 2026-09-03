@@ -1,9 +1,9 @@
-import type { createFilter } from "@rollup/pluginutils";
-import type { transformSync } from "oxc-transform";
+import type { FilterPattern } from "@rollup/pluginutils";
+import type { TransformResult } from "oxc-transform";
 
 export interface PrefreshOptions {
-  readonly exclude?: Readonly<Parameters<typeof createFilter>[1]>;
-  readonly include?: Readonly<Parameters<typeof createFilter>[0]>;
+  readonly exclude?: Readonly<FilterPattern>;
+  readonly include?: Readonly<FilterPattern>;
   readonly jsxImportSource?: string;
   readonly target?: string | string[];
 }
@@ -13,7 +13,7 @@ export interface TransformOptions {
 }
 
 export interface PluginContext {
-  readonly filter: ReturnType<typeof createFilter>;
+  readonly filter: (id: unknown) => boolean;
   readonly jsxImportSource: string;
   readonly target: string | string[];
 }
@@ -25,10 +25,8 @@ export interface TransformInput {
   readonly transformOptions?: TransformOptions;
 }
 
-export type OxcResult = ReturnType<typeof transformSync>;
-
-export type OxcTransformResult = Omit<OxcResult, "map"> & {
-  readonly map: NonNullable<OxcResult["map"]>;
+export type OxcTransformResult = Omit<TransformResult, "map"> & {
+  readonly map: NonNullable<TransformResult["map"]>;
 };
 
 export type ReadonlyString = Readonly<string>;
