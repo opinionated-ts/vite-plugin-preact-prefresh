@@ -1,38 +1,15 @@
 {
+  "extends": "@opinionated-ts/config/tsconfig.json",
   "compilerOptions": {
-    // Environment setup & latest features
-    "lib": ["ESNext"],
-    "target": "ESNext",
-    "module": "Preserve",
-    "moduleDetection": "force",
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "types": ["bun", "node"],
-
-    // Bundler mode
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "noEmit": true,
-
-    // Best practices
-    "strict": true,
-    "skipLibCheck": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "useUnknownInCatchVariables": true,
-
-    "isolatedModules": true,
-    // "isolatedDeclarations": true,
-
-    // Some stricter flags
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+
+      // Preact compat for React
+      "react": ["./node_modules/preact/compat/"],
+      "react/jsx-runtime": ["./node_modules/preact/jsx-runtime"],
+      "react-dom": ["./node_modules/preact/compat/"],
+      "react-dom/*": ["./node_modules/preact/compat/*"]
     }
-  }
+  },
+  "include": ["src", "tests", "*.config.*"]
 }

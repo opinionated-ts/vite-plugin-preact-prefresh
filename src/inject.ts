@@ -1,7 +1,7 @@
 import type { TransformResult } from "vite";
 
 import remapping from "@ampproject/remapping";
-import MagicString from "magic-string";
+import { MagicString } from "magic-string";
 
 import type { ReadonlyString, OxcTransformResult } from "./types";
 

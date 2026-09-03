@@ -1,12 +1,23 @@
-// Configuration entry point: default export is intentional.
-// Tracked by: https://github.com/DanhezCode/awesome-config/issues/1
-// Blocked by: https://github.com/oxc-project/oxc/issues/25824
-// oxlint-disable import/no-default-export
+import { cspellConfig } from "@opinionated-ts/config";
+import { defineConfig } from "cspell";
 
-import cspellSettings from "awesome-config/cspell.config";
+export default defineConfig({
+  ...cspellConfig,
 
-export default {
-  ...cspellSettings,
-  dictionaries: [...cspellSettings.dictionaries],
-  words: [...cspellSettings.words, "prefresh", "pluginutils", "ampproject"],
-};
+  dictionaries: [
+    ...cspellConfig.dictionaries,
+    // Custom dictionaries here
+  ],
+
+  import: [
+    ...cspellConfig.import,
+    // Custom import paths here
+  ],
+
+  words: [
+    ...cspellConfig.words,
+    // Custom words here
+  ],
+
+  // Any additional custom configuration here
+});

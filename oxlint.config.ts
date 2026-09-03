@@ -1,6 +1,9 @@
-// Configuration entry point: default export is intentional.
-// Tracked by: https://github.com/DanhezCode/awesome-config/issues/1
-// Blocked by: https://github.com/oxc-project/oxc/issues/25824
-// oxlint-disable import/no-default-export
+import { oxlintConfig } from "@opinionated-ts/config";
+import { defineConfig } from "oxlint";
 
-export { default } from "awesome-config/oxlint.config";
+export default defineConfig({
+  extends: [oxlintConfig],
+  rules: {
+    // Custom rules here
+  },
+});

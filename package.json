@@ -36,8 +36,8 @@
   "scripts": {
     "build": "tsdown",
     "cspell": "cspell lint .",
-    "fmt": "oxfmt --check . 1>/dev/null || oxfmt --check .",
-    "fmt:fix": "oxfmt . 1>/zdev/null || oxfmt .",
+    "fmt": "oxfmt --check .",
+    "fmt:fix": "oxfmt .",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "check": "bun fmt && bun lint && bun cspell",
@@ -54,8 +54,8 @@
     "oxc-transform": "0.146.0"
   },
   "devDependencies": {
+    "@opinionated-ts/config": "1.8.5",
     "@vitest/coverage-v8": "4.1.10",
-    "awesome-config": "3.0.1",
     "tsdown": "0.22.14",
     "vitest": "4.1.10"
   },
